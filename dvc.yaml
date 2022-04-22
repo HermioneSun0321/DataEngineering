@@ -1,0 +1,30 @@
+stages:
+  web_scraping_checks:
+    cmd: python /project/Individual/python_files/web_scraping.py
+    outs:
+      - web_scraping.txt:
+          checkpoint: true
+
+  data_transformation_checks:
+    cmd: python /project/Individual/python_files/data_transformation.py
+    outs:
+      - data_transformation.txt:
+          checkpoint: true
+
+  machine_learning_checks:
+    cmd: python /project/Individual/python_files/machine_learning.py
+    outs:
+      - machine_learning.txt:
+          checkpoint: true
+
+  subsets_for_shema_checks:
+    cmd: python /project/Individual/python_files/subsets_for_shema.py
+    outs:
+      - subsets_for_shema.txt:
+          checkpoint: true
+
+  write_into_database_checks:
+    cmd: python /project/Individual/python_files/write_into_database.py
+    outs:
+      - write_into_database.txt:
+          checkpoint: true

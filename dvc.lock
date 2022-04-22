@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  web_scraping_checks:
+    cmd: python /project/Individual/python_files/web_scraping.py
+    outs:
+    - path: web_scraping.txt
+  data_transformation_checks:
+    cmd: python /project/Individual/python_files/data_transformation.py
+    outs:
+    - path: data_transformation.txt
+  machine_learning_checks:
+    cmd: python /project/Individual/python_files/machine_learning.py
+    outs:
+    - path: machine_learning.txt
+  subsets_for_shema_checks:
+    cmd: python /project/Individual/python_files/subsets_for_shema.py
+    outs:
+    - path: subsets_for_shema.txt
+  write_into_database_checks:
+    cmd: python /project/Individual/python_files/write_into_database.py
+    outs:
+    - path: write_into_database.txt
